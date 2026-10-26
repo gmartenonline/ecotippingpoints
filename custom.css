@@ -204,7 +204,7 @@ transform: translate(8%, -24.5%);
 pointer-events: none;
 }
 header::after {
-  animation: globe-fade-in 8s ease-in-out both;
+  animation: globe-fade-in 6s ease-in-out both;
 }
 
 @keyframes globe-fade-in {
