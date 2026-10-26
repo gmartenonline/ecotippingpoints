@@ -1,0 +1,16 @@
+{% assign current_url = page.url | replace: '-TEST.html', '.html' %}
+<nav class="navbar navbar-expand-lg container site-nav" data-bs-theme="dark" aria-label="Main navigation">
+<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="main-navigation">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link{% if current_url == '/index.html' or current_url == '/' %} active{% endif %}" href="/index.html"{% if current_url == '/index.html' or current_url == '/' %} aria-current="page"{% endif %}>Home</a></li>
+<li class="nav-item"><a class="nav-link{% if current_url == '/our-mission.html' %} active{% endif %}" href="/our-mission.html"{% if current_url == '/our-mission.html' %} aria-current="page"{% endif %}>Our Mission</a></li>
+<li class="nav-item"><a class="nav-link{% if current_url == '/about-etps.html' %} active{% endif %}" href="/about-etps.html"{% if current_url == '/about-etps.html' %} aria-current="page"{% endif %}>About ETPs</a></li>
+<li class="nav-item"><a class="nav-link{% if current_url == '/our-stories.html' or current_url contains '/our-stories/' %} active{% endif %}" href="/our-stories.html"{% if current_url == '/our-stories.html' %} aria-current="page"{% elsif current_url contains '/our-stories/' %} aria-current="location"{% endif %}>Our Stories</a></li>
+<li class="nav-item"><a class="nav-link{% if current_url == '/photo-video.html' or current_url contains '/photo-gallery/' or current_url contains '/video/' %} active{% endif %}" href="/photo-video.html"{% if current_url == '/photo-video.html' %} aria-current="page"{% elsif current_url contains '/photo-gallery/' or current_url contains '/video/' %} aria-current="location"{% endif %}>Photo &middot; Video</a></li>
+<li class="nav-item"><a class="nav-link{% if current_url == '/for-teachers.html' or current_url contains '/education/' %} active{% endif %}" href="/for-teachers.html"{% if current_url == '/for-teachers.html' %} aria-current="page"{% elsif current_url contains '/education/' %} aria-current="location"{% endif %}>For Teachers</a></li>
+<li class="nav-item"><a class="nav-link{% if current_url == '/resources.html' or current_url contains '/resources/' %} active{% endif %}" href="/resources.html"{% if current_url == '/resources.html' %} aria-current="page"{% elsif current_url contains '/resources/' %} aria-current="location"{% endif %}>Resources</a></li>
+<li class="nav-item"><a class="nav-link{% if current_url == '/contact-us.html' %} active{% endif %}" href="/contact-us.html"{% if current_url == '/contact-us.html' %} aria-current="page"{% endif %}>Contact Us</a></li>
+</ul>
+</div>
+</nav>
